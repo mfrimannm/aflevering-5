@@ -19,7 +19,7 @@ void udskrivListen(student_t students[], int studentNrs);
 int main() {
 	// starter med at lave et array som kommer til at indeholde mine student_t informaioner
 	// dette for en given længde hvilke selvfølgelig er en begræsning.
-	student_t students[10000];
+	student_t students[10001];
 	// her laver jeg nogen af de variabler jeg skal bruge senere
 	// samt sætter den nuværende antal studerende i databasen til 0 og name bliver defineret som en "string" på 5 char + '\0'
 	int svar = 1;
@@ -104,7 +104,6 @@ int dtbConvert(int yearD, int semesterD, int gpaD) {
 	gpaB += ((gpaD / 4) % 2) * 256;
 	gpaB += ((gpaD / 2) % 2) * 128;
 	gpaB += (gpaD % 2) * 64;
-
 	return yearD + semesterD + gpaB; // til sidst lægges tallene sammen og retuneres.
 
 }
